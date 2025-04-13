@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anits Online Courses</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-image: linear-gradient(
+          to right,
+          #144dbb,
+          #6ec854
+        ); /* left to right */
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fd7e14;
+        padding: 10px 20px;
+      }
+
+      .logo {
+        border-radius: 50%;
+        width: 50px;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        background-color: #fff0f6;
+        padding: 10px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: black;
+        border: 3px solid goldenrod;
+        padding: 5px 10px;
+        transition: 0.3s;
+      }
+
+      nav a:hover {
+        background-color: #a5d8ff;
+        transform: scale(1.2);
+      }
+
+      marquee {
+        background-color: #b2f2bb;
+        padding: 5px;
+        font-weight: bold;
+      }
+
+      section {
+        background-image: url("achievement.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 400px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+      }
+
+      .icon {
+        width: 50px;
+        height: 50px;
+        color: grey;
+        border-radius: 50%;
+        background-color: #7950f2;
+        padding: 10px;
+        transition: transform 0.3s;
+      }
+
+      .icon:hover {
+        transform: scale(1.3);
+      }
+
+      .steps {
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: 3px solid #d8f5a2;
+        border-radius: 10px;
+        background-color: #c5f6fa;
+      }
+
+      .steps h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .steps h3 {
+        margin: 10px 0;
+      }
+
+      .courses {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+        justify-items: center;
+      }
+
+      .card {
+        width: 200px;
+        border: 3px solid black;
+        padding: 10px;
+        transition: 0.3s;
+        background-color: #d3f9d8;
+        text-align: center;
+      }
+
+      .card:hover {
+        transform: scale(1.1);
+      }
+
+      .card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+      }
+
+      .card-a {
+        background-color: orange;
+        display: inline-block;
+        padding: 5px 10px;
+        margin-top: 5px;
+        text-decoration: none;
+        color: black;
+        transition: 0.2s;
+      }
+
+      .card-a:hover {
+        background-color: #8ce99a;
+      }
+
+      form {
+        border: 3px solid bisque;
+        padding: 30px;
+        border-radius: 15px;
+        width: 300px;
+        margin: 30px auto;
+      }
+
+      form label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+
+      form input {
+        width: 100%;
+        padding: 5px;
+        margin-top: 5px;
+      }
+
+      form input[type="submit"] {
+        background-color: goldenrod;
+        border: none;
+        color: white;
+        padding: 10px;
+        margin-top: 15px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      form input[type="submit"]:hover {
+        background-color: darkgoldenrod;
+      }
+
+      main h1 {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      /* Smooth Scroll */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <img class="logo" src="logo.jpeg" alt="Anits logo" />
+      <h2>Anits Online Courses</h2>
+    </header>
+
+    <!-- Announcement -->
+    <marquee>Special offer — grab the courses for 50% off!</marquee>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="https://anits.edu.in/">Home</a>
+      <a href="#cour">Our Courses</a>
+      <a href="#st">Steps</a>
+      <a href="#sign-in-form">Sign In</a>
+      <!-- Added anchor link to form -->
+    </nav>
+
+    <!-- Hero Section -->
+    <section>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+        />
+      </svg>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+        />
+      </svg>
+    </section>
+
+    <!-- Registration Steps -->
+    <div class="steps" id="st">
+      <h1>Steps to Register for Courses</h1>
+      <h3>👉 Click "Sign In" button</h3>
+      <h3>👉 Register there</h3>
+      <h3>👉 Pay money for the course</h3>
+      <h3>👉 Continue the process of learning</h3>
+      <h3>👉 Receive ANITS certifications</h3>
+    </div>
+
+    <!-- Courses -->
+    <h1 style="text-align: center" id="cour">Our Courses</h1>
+    <div class="courses">
+      <div class="card">
+        <img src="ai.jpeg" alt="AI Course" />
+        <p>Machine Learning Course</p>
+        <p>₹999</p>
+        <a class="card-a" href="#">Buy this course</a>
+      </div>
+
+      <div class="card">
+        <img src="web.jpeg" alt="Web Development" />
+        <p>Web Development Course</p>
+        <p>₹999</p>
+        <a class="card-a" href="#">Buy this course</a>
+      </div>
+
+      <div class="card">
+        <img src="hacking.jpeg" alt="Ethical Hacking" />
+        <p>Ethical Hacking Course</p>
+        <p>₹999</p>
+        <a class="card-a" href="#">Buy this course</a>
+      </div>
+
+      <div class="card">
+        <img src="data_anal.jpeg" alt="Data Analytics" />
+        <p>Data Analytics Course</p>
+        <p>₹999</p>
+        <a class="card-a" href="#">Buy this course</a>
+      </div>
+
+      <div class="card">
+        <img src="data_science.jpeg" alt="Data Science" />
+        <p>Data Science Course</p>
+        <p>₹999</p>
+        <a class="card-a" href="#">Buy this course</a>
+      </div>
+
+      <div class="card">
+        <img src="digital.jpeg" alt="Digital Marketing" />
+        <p>Digital Marketing Course</p>
+        <p>₹999</p>
+        <a class="card-a" href="#">Buy this course</a>
+      </div>
+
+      <div class="card">
+        <img src="trade.jpeg" alt="Stock Trading" />
+        <p>Stock Trading Course</p>
+        <p>₹999</p>
+        <a class="card-a" href="#">Buy this course</a>
+      </div>
+
+      <div class="card">
+        <img src="enterprenuer.jpeg" alt="Entrepreneurship" />
+        <p>Entrepreneurship Course</p>
+        <p>₹999</p>
+        <a class="card-a" href="#">Buy this course</a>
+      </div>
+
+      <div class="card">
+        <img src="marketing.jpeg" alt="Marketing" />
+        <p>Marketing Strategies Course</p>
+        <p>₹999</p>
+        <a class="card-a" href="#">Buy this course</a>
+      </div>
+    </div>
+
+    <!-- Sign In Form -->
+    <main id="sign-in-form">
+      <h1>Sign In</h1>
+      <form action="submit.php" method="post">
+        <label for="roll">Roll no:</label>
+        <input type="text" placeholder="Roll no" required name="roll" />
+        <label for="name">Name:</label>
+        <input type="text" placeholder="Name" name="name" />
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="Email" required />
+        <label for="phone">Phone Number</label>
+        <input type="text" name="phone" required placeholder="phone number" />
+        <input type="submit" value="Sign In" />
+      </form>
+    </main>
+  </body>
+</html>
